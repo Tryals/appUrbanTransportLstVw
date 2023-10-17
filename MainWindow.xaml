@@ -1,0 +1,52 @@
+﻿<Window x:Class="appUrbanTransport.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:appUrbanTransport"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280">
+    <Grid Background="AntiqueWhite">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="0"
+                    Background="AntiqueWhite"
+                    VerticalAlignment="Center">
+            <TextBlock Text="Городской транспорт"
+                       FontSize="50"
+                       FontFamily="Helvetica"
+                       FontWeight="Bold"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="1">
+        </StackPanel>
+        <Frame Grid.Row="1"
+               Name="frmMain"
+            ContentRendered="frmMain_ContentRendered"
+               NavigationUIVisibility="Hidden"
+               Background="AntiqueWhite">
+        </Frame>
+        <StackPanel Orientation="Horizontal"
+            Grid.Row="2">
+            <Button Name="BtnRoutes"
+                    Click="BtnRoutes_Click"
+                    Content="Маршруты"
+                    Height="90"
+                    Style="{StaticResource stlButton}"/>
+            <Button Name="BtnTransport"
+                    Click="BtnTransport_Click"
+                    Content="Транспорт"
+                    Height="90"
+                    Style="{StaticResource stlButton}"/>
+            <Button Name="BtnTransportListview"
+                    Click="BtnTransport_Click_1"
+                    Content="Транспорт ListView"
+                    Height="90"
+                    Style="{StaticResource stlButton}"/>
+        </StackPanel>
+    </Grid>
+</Window>
