@@ -202,7 +202,7 @@ namespace appUrbanTransport.Pages
 
             Word.Paragraph empParagraph = document.Paragraphs.Add();
             Word.Range empRange = empParagraph.Range;
-            empRange.Text = "Сотрудники";
+            empRange.Text = "Транспорт";
             empRange.Font.Bold = 4;
             empRange.Font.Italic = 4;
             empRange.Font.Color = Word.WdColor.wdColorBlue;
@@ -244,6 +244,11 @@ namespace appUrbanTransport.Pages
             application.Visible = true;
 
             document.SaveAs2(@"D:\ИСП21.1А\Зинченко Хромов\appUrbanTransportLst\bin\Debug\PDF.pdf", Word.WdExportFormat.wdExportFormatPDF);
+        }
+
+        private void BtnGoToDiagram_Click(object sender, RoutedEventArgs e)
+        {
+            BD.ClassFrame.frmObj.Navigate(new Pages.PageDiagram());
         }
     }
 }

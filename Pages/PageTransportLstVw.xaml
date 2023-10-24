@@ -129,6 +129,12 @@
                     Width="130"
                     Height="30"
                     Click="BtnSaveToPDF_Click"/>
+            <Button x:Name="BtnGoToDiagram"
+                    Style="{StaticResource StyleMenuButton}"
+                    Width="130"
+                    Height="30"
+                    Content="Диаграмма"
+                    Click="BtnGoToDiagram_Click"/>
         </StackPanel>
     </Grid>
 </Page>
